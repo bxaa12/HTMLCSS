@@ -1,0 +1,173 @@
+body {
+    background-color: rgb(0, 0, 0);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    overflow-y: auto;
+    height: 100vh; 
+    margin: 0;
+    flex-direction: column;
+  }
+
+
+.scrolltext {
+    height: 50px;	
+    overflow: hidden;
+    position: relative;
+    background: rgb(0, 0, 0);
+      background-color: #e25554;
+      color: #ffffff;
+    border: 0px solid #000000;
+   }
+   .scrolltext p {
+    position: absolute;
+    min-width: 200%;
+    height: 100%;
+    margin: 0;
+    line-height: 50px;
+    text-align: center;
+    white-space: nowrap;
+   
+   
+   /* starting position */
+    left:100%;
+  animation: scrolltext 15s linear infinite;
+   }
+  
+  
+   .scrolltext:hover p {
+    animation-duration: 30s; 
+  }
+  
+   @keyframes scrolltext {
+    0%   {
+   left: 100%; 		
+    }
+    100% {
+    left: -100%; 
+    }
+   }
+
+    
+  .navigation {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 10px;
+  }
+  
+  /* Nav items */
+  li {
+    list-style-type: none;
+    width: 120px;
+    text-align: center;
+    font-family: Verdana;
+    font-size: 1rem;
+    margin: 10px;
+    border-radius: 30px;
+    display: inline-block;
+    overflow: hidden;
+  }
+  
+  li a {
+    padding: 8px;
+    background-color: #006f6e;
+    display: block;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+  }
+  
+  li a:hover {
+    background-color: #e25554;
+    color: #3532db;
+    box-shadow: 0 0 15px black;
+    transition: 0.3s ease-in;
+  }
+  
+
+ 
+
+  @media (max-width: 768px) {
+    .header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .logo {
+      margin-bottom: 10px;
+    }
+  
+    .character {
+      margin-left: 5vw;
+      margin-top: 10vh;
+    }
+  
+    h2 {
+      font-size: 9vw;
+      margin-left: 5vw;
+      margin-top: 10vh;
+    }
+  
+    .welcomebacktext {
+      font-size: 4vw;
+      margin-left: 5vw;
+    }
+  
+    li {
+      width: 100px;
+      font-size: 0.9rem;
+    }
+  }
+  
+
+
+  #draggableImage {
+    width: 150px;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    cursor: grab;
+  }
+
+  footer a {
+    text-decoration: none;
+    padding-top: 0px;
+    padding-bottom: 10px;
+    margin-top: 500px;
+    position: relative;
+  }
+  
+  footer {
+    margin-top: 100px; 
+  }
+  
+
+  .draggable {
+    position: absolute; 
+    cursor: grab;
+    scale: .2
+  }
+  .draggable2 {
+    position: absolute; 
+    cursor: grab; 
+    scale: .2
+  }
+  .draggable3 {
+    position: absolute; 
+    cursor: grab;
+    scale: .2
+  }
+
+  .base{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -999;
+    width: 350px; 
+    height: auto;
+    bottom: 300px; 
+    margin-bottom: 3000px;
+  }
+
